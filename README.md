@@ -12,25 +12,7 @@
 
 ## Description
 
-API for state and national parks. The API will list state and national parks.
-Include:
-
-- Full CRUD functionality
-- Further exploration: authentication, versioning, pagination, Swagger documentation, or CORS
-- Complete documentation of API endpoints and further exploration done
-
-Objectives:
-
-- CRUD functionality and successfully returns responses to API calls
-- Includes at least one further exploration objective
-- Well documented
-
-## User Stories
-
-<details>
-  <summary>Expand</summary>
-
-</details>
+Twelth indepdendent project for Epicodus to demonstrate my understanding of building APIs. This is an a C#/.NET API using RESTful principles. I used .NET Core's built-in functionality to scaffold the API-only application. This application includes full CRUD functionality and nested routes. It successfully makes API calls. It returns JSON objects via Postman. Returning headers all have correct HTTP status code. Documentation for endpoints can be viewed in the 'API Documentation' section. I have also incorporated Swagger documentation services, for information and isntructions please read 'View In Browser' and 'Using Swagger Documentation' sections. This application is a Parks Lookup API for state and national parks. It will list state and national parks that are in the database. This application will allow a user to make API calls to create, read, edit and delete data.
 
 ## Setup/Installation Requirements
 
@@ -137,10 +119,9 @@ Create a connection string to connect the database to the web application
 
 ##### View In Browser
 
-- To view in browser, navigate to APIParks folder in the command line
-- Use the command `dotnet run` to execute the compiled code and start a localhost
+- To view HTTP requests in browser, navigate to APIParks folder in the command line use the command `dotnet run` to execute the compiled code and start a localhost
 - In browser navigate to http://localhost:5000
-  TODO
+- You will be directed to Swagger's UI and will be able to view and try out the HTTP requests
 
 ## API Documentation
 
@@ -148,7 +129,7 @@ Explore the API endpoints in Postman or a browser.
 
 ##### Using Swagger Documentation
 
-To explore the API with Swashbuckle, launch using the command `dotnet run` in the terminal and go to `http://localhost:5000/` in browser.
+To explore the API with Swashbuckle, launch using the command `dotnet run` in the terminal and go to `http://localhost:5000/` in browser. You will be able to view and try out the HTTP requests with the Swagger UI.
 
 ## Endpoints
 
