@@ -157,64 +157,109 @@ Base Url: `https://localhost:5000`
 #### HTTP Request Structure
 
 ```
-GET /api/TODO
-POST /api/value
-GET /api/value/{id}
-PUT /api/vlue/{id}
-DELETE /api/value/{id}
+GET /api/{value}
+POST /api/{value}
+GET /api/{value}/{id}
+PUT /api/{value}/{id}
+DELETE /api/{value}/{id}
 ```
 
 #### Example Query
 
-`https://localhost:5000/api/value/id`
-
-TODO
+`https://localhost:5000/api/states/3`
 
 #### Sample JSON Response
 
 ```
-{
-    "Id": TODO,
-    "Name": TODO,
-}
+ {
+        "stateId": 3,
+        "stateParkName": "Niagara Falls State Park",
+        "stateParkLocation": "New York",
+        "stateParkDescription": "Niagara Falls State Park is recognized at the oldest state park in the United States. It contains the American Falls, the Bridal Veil Falls, and a portion of the Horseshoe Falls (also known as the Canadian Falls)."
+    }
 ```
 
-#### Model 1 TODO
+#### State Parks
 
-Description
+Find information about a state park!
 
 #### HTTP Request
 
 ```
-GET /api/TODO
-POST /api/value
-GET /api/value/{id}
-PUT /api/vlue/{id}
-DELETE /api/value/{id}
+GET /api/states
+POST /api/states
+GET /api/states/{id}
+PUT /api/states/{id}
+DELETE /api/states/{id}
 ```
 
 #### Path Parameters
 
-| Parameter | Type   | Default | Required | Description                                                  |
-| --------- | ------ | ------- | -------- | ------------------------------------------------------------ |
-| name      | string | none    | false    | Return matches by name.                                      |
-| origin    | string | none    | false    | Return any bean from a specific country or region of origin. |
-| flavor    | string | none    | false    | Return bean matches with a specific flavor profile.          |
+| Parameter         | Type   | Default | Required | Description                        | Example                                |
+| ----------------- | ------ | ------- | -------- | ---------------------------------- | -------------------------------------- |
+| stateparkname     | string | none    | false    | Return matches by state park name. | stateparkname=niagara falls state park |
+| stateparklocation | string | none    | false    | Return matches by state name       | stateparklocation=new york             |
+
+- For state park names please include 'state park' at the end of the name. Example: na pali coast state park
+- For state park locations please enter a state name. Example: hawaii
 
 #### Example Query
 
-`https://localhost:5000/api/value?name=name&origin=place`
+`http://localhost:5000/api/states?stateparkname=niagara falls state park&stateparklocation=new york`
 
 #### Sample JSON Response
 
 ```
 {
-    "Id": TODO,
-    "Name": TODO,
+      {
+        "stateId": 3,
+        "stateParkName": "Niagara Falls State Park",
+        "stateParkLocation": "New York",
+        "stateParkDescription": "Niagara Falls State Park is recognized at the oldest state park in the United States. It contains the American Falls, the Bridal Veil Falls, and a portion of the Horseshoe Falls (also known as the Canadian Falls)."
+    }
 }
 ```
 
-TODO repeat for all models
+#### National Parks
+
+Find information about a national park!
+
+#### HTTP Request
+
+```
+GET /api/nationals
+POST /api/nationals
+GET /api/nationals/{id}
+PUT /api/nationals/{id}
+DELETE /api/nationals/{id}
+```
+
+#### Path Parameters
+
+| Parameter            | Type   | Default | Required | Description                           | Example                                    |
+| -------------------- | ------ | ------- | -------- | ------------------------------------- | ------------------------------------------ |
+| nationalparkname     | string | none    | false    | Return matches by national park name. | nationalparkname=yellowstone national park |
+| nationalparklocation | string | none    | false    | Return matches by state name          | nationalparklocation=wyoming               |
+
+- For national park names please include 'national park' at the end of the name. Example: grand teton national park
+- For state park locations please enter a state name. Example: wyoming
+
+#### Example Query
+
+`http://localhost:5000/api/nationals?nationalparkname=yellowstone national park&nationalparklocation=wyoming`
+
+#### Sample JSON Response
+
+```
+{
+      {
+        "nationalId": 1,
+        "nationalParkName": "Yellowstone National Park",
+        "nationalParkLocation": "Wyoming",
+        "nationalParkDescription": "Yellowstone National Park features dramatic canyons, alpine rivers, lush forests, hot springs, and gushing geysers, including its most famous, Old Faithful. Yellowstone Lake is one of the largest high-elevation lakes in North America and is centered over the Yellowstone Caldera, the largest super-volcano on the continent."
+    }
+}
+```
 
 ## Known Bugs
 
