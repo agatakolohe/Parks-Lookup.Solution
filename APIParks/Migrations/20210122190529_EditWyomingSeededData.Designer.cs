@@ -2,14 +2,16 @@
 using APIParks.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIParks.Migrations
 {
     [DbContext(typeof(APIParksContext))]
-    partial class APIParksContextModelSnapshot : ModelSnapshot
+    [Migration("20210122190529_EditWyomingSeededData")]
+    partial class EditWyomingSeededData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

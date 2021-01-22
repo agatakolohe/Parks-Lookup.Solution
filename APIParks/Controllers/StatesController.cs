@@ -16,6 +16,7 @@ namespace APIParks.Controllers
             _db = db;
         }
         //GET api/states
+        //GET api/states?stateparklocation={stateParkLocation}
         [HttpGet]
         public ActionResult<IEnumerable<State>> Get(string stateParkLocation)
         {

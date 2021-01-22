@@ -20,7 +20,7 @@ namespace APIParks.Models
                     {
                         NationalId = 1,
                         NationalParkName = "Yellowstone National Park",
-                        NationalParkLocation = "Wyoming, Montana, Idaho",
+                        NationalParkLocation = "Wyoming",
                         NationalParkDescription = "Yellowstone National Park features dramatic canyons, alpine rivers, lush forests, hot springs, and gushing geysers, including its most famous, Old Faithful. Yellowstone Lake is one of the largest high-elevation lakes in North America and is centered over the Yellowstone Caldera, the largest super-volcano on the continent."
                     },
                     new National

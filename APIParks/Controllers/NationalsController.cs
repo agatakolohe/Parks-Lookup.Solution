@@ -16,12 +16,7 @@ namespace APIParks.Controllers
             _db = db;
         }
         //GET api/nationals
-        [HttpGet]
-        public ActionResult<IEnumerable<National>> Get()
-        {
-            return _db.Nationals.ToList();
-        }
-        //GET api/nationals?nationalparklocation=wyoming
+        //GET api/nationals?nationalparklocation={nationalParkLocation}
         [HttpGet]
         public ActionResult<IEnumerable<National>> Get(string nationalParkLocation)
         {
@@ -32,6 +27,17 @@ namespace APIParks.Controllers
             }
             return query.ToList();
         }
+        //GET api/nationals?nationalparklocation=wyoming
+        // [HttpGet]
+        // public ActionResult<IEnumerable<National>> Get(string nationalParkLocation)
+        // {
+        //     var query = _db.Nationals.AsQueryable();
+        //     if (nationalParkLocation != null)
+        //     {
+        //         query = query.Where(entry => entry.NationalParkLocation == nationalParkLocation);
+        //     }
+        //     return query.ToList();
+        // }
 
         //POST api/nationals
         [HttpPost]
