@@ -1,7 +1,6 @@
 ﻿using APIParks.Models;
 using APIParks.Helpers;
 using APIParks.Services;
-using Automapper;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System;
+using AutoMapper;
+using System.Text;
 
 namespace APIParks
 {
