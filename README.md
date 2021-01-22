@@ -179,14 +179,15 @@ DELETE /api/{value}/{id}
     }
 ```
 
-#### State Parks
+<details>
 
-Find information about a state park!
+<summary>State Parks. Expand to access information about a state park</summary>
 
 #### HTTP Request
 
 ```
 GET /api/states
+GET api/states/{stateparklocation}
 POST /api/states
 GET /api/states/{id}
 PUT /api/states/{id}
@@ -205,9 +206,12 @@ DELETE /api/states/{id}
 
 #### Example Query
 
-`http://localhost:5000/api/states?stateparkname=niagara falls state park&stateparklocation=new york`
+1. `http://localhost:5000/api/states?stateparkname=niagara falls state park&stateparklocation=new york`
+2. `http://localhost:5000/api/states/hawaii`
 
 #### Sample JSON Response
+
+1.
 
 ```
 {
@@ -220,14 +224,34 @@ DELETE /api/states/{id}
 }
 ```
 
-#### National Parks
+2.
 
-Find information about a national park!
+```
+ {
+        "stateId": 1,
+        "stateParkName": "Iao Valley State Park",
+        "stateParkLocation": "Hawaii",
+        "stateParkDescription": "Iao Valley State Park features a dense rainforest canopy. It is dominated by the Iao Needle, a 1,200ft vegetation-covered lava remnant that rises from the valley floor to a higher height than the Eiffel Tower. "
+    },
+    {
+        "stateId": 4,
+        "stateParkName": "Na Pali Coast State Park",
+        "stateParkLocation": "Hawaii",
+        "stateParkDescription": "Na Pali Coast State Park is located on the oldest inhabited Hawaiian Island, Kaua'i. It is known for its towering pali, or sea cliffs, narrow valleys, streams and cascading waterfalls. The state park was formed to protect the Kalalau Valley. "
+    }
+```
+
+</details>
+
+<details>
+
+<summary> National Parks.  Expand to access information about a national park</summary>
 
 #### HTTP Request
 
 ```
 GET /api/nationals
+GET api/nationals/{nationalparklocation}
 POST /api/nationals
 GET /api/nationals/{id}
 PUT /api/nationals/{id}
@@ -246,9 +270,12 @@ DELETE /api/nationals/{id}
 
 #### Example Query
 
-`http://localhost:5000/api/nationals?nationalparkname=yellowstone national park&nationalparklocation=wyoming`
+1. `http://localhost:5000/api/nationals?nationalparkname=yellowstone national park&nationalparklocation=wyoming`
+2. `http://localhost:5000/api/nationals/hawaii`
 
 #### Sample JSON Response
+
+1.
 
 ```
 {
@@ -260,6 +287,21 @@ DELETE /api/nationals/{id}
     }
 }
 ```
+
+2.
+
+```
+ {
+     {
+        "nationalId": 3,
+        "nationalParkName": "Haleakala National Park",
+        "nationalParkLocation": "Hawaii",
+        "nationalParkDescription": "Haleakala National Park is named after Haleakala, a dormant volcano within its boundaries. The name is Hawaiian for 'house of the sun'. According to a local legend, the demigod Maui imprisoned the sun here in order to lengthen the day."
+    }
+ }
+```
+
+</details>
 
 ## Known Bugs
 
