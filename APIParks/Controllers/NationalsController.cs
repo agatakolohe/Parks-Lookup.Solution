@@ -27,17 +27,14 @@ namespace APIParks.Controllers
             }
             return query.ToList();
         }
-        //GET api/nationals?nationalparklocation=wyoming
-        // [HttpGet]
-        // public ActionResult<IEnumerable<National>> Get(string nationalParkLocation)
-        // {
-        //     var query = _db.Nationals.AsQueryable();
-        //     if (nationalParkLocation != null)
-        //     {
-        //         query = query.Where(entry => entry.NationalParkLocation == nationalParkLocation);
-        //     }
-        //     return query.ToList();
-        // }
+        // GET api/nationals/{nationalparklocation}
+        [HttpGet("{nationalparklocation}")]
+        public ActionResult<IEnumerable<National>> GetParkByLocation(string nationalParkLocation)
+        {
+            var query = _db.Nationals.AsQueryable();
+            query = query.Where(entry => entry.NationalParkLocation == nationalParkLocation);
+            return query.ToList();
+        }
 
         //POST api/nationals
         [HttpPost]
