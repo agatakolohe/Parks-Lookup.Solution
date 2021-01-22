@@ -21,6 +21,18 @@ namespace APIParks.Controllers
         {
             return _db.Nationals.ToList();
         }
+        //GET api/nationals?nationalparklocation=wyoming
+        [HttpGet]
+        public ActionResult<IEnumerable<National>> Get(string nationalParkLocation)
+        {
+            var query = _db.Nationals.AsQueryable();
+            if (nationalParkLocation != null)
+            {
+                query = query.Where(entry => entry.NationalParkLocation == nationalParkLocation);
+            }
+            return query.ToList();
+        }
+
         //POST api/nationals
         [HttpPost]
         public void Post([FromBody] National national)
