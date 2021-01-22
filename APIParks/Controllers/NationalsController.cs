@@ -16,11 +16,15 @@ namespace APIParks.Controllers
             _db = db;
         }
         //GET api/nationals
-        //GET api/nationals?nationalparklocation={nationalParkLocation}
+        //GET api/nationals?nationalparkname={nationalparkname}&nationalparklocation={nationalParkLocation}
         [HttpGet]
-        public ActionResult<IEnumerable<National>> Get(string nationalParkLocation)
+        public ActionResult<IEnumerable<National>> Get(string nationalParkName, string nationalParkLocation)
         {
             var query = _db.Nationals.AsQueryable();
+            if (nationalParkName != null)
+            {
+                query = query.Where(entry => entry.NationalParkName == nationalParkName);
+            }
             if (nationalParkLocation != null)
             {
                 query = query.Where(entry => entry.NationalParkLocation == nationalParkLocation);

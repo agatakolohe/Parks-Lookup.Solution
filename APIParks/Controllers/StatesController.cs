@@ -18,9 +18,13 @@ namespace APIParks.Controllers
         //GET api/states
         //GET api/states?stateparklocation={stateParkLocation}
         [HttpGet]
-        public ActionResult<IEnumerable<State>> Get(string stateParkLocation)
+        public ActionResult<IEnumerable<State>> Get(string stateParkName, string stateParkLocation)
         {
             var query = _db.States.AsQueryable();
+            if (stateParkName != null)
+            {
+                query = query.Where(entry => entry.StateParkName == stateParkName);
+            }
             if (stateParkLocation != null)
             {
                 query = query.Where(entry => entry.StateParkLocation == stateParkLocation);
