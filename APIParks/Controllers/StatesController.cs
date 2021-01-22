@@ -17,12 +17,6 @@ namespace APIParks.Controllers
         }
         //GET api/states
         [HttpGet]
-        public ActionResult<IEnumerable<State>> Get()
-        {
-            return _db.States.ToList();
-        }
-        //GET api/states?stateparklocation=hawaii
-        [HttpGet]
         public ActionResult<IEnumerable<State>> Get(string stateParkLocation)
         {
             var query = _db.States.AsQueryable();
@@ -32,6 +26,17 @@ namespace APIParks.Controllers
             }
             return query.ToList();
         }
+        //GET api/states?stateparklocation=hawaii
+        // [HttpGet]
+        // public ActionResult<IEnumerable<State>> GetParkByLocation(string stateParkLocation)
+        // {
+        //     var query = _db.States.AsQueryable();
+        //     if (stateParkLocation != null)
+        //     {
+        //         query = query.Where(entry => entry.StateParkLocation == stateParkLocation);
+        //     }
+        //     return query.ToList();
+        // }
 
         //POST api/states
         [HttpPost]

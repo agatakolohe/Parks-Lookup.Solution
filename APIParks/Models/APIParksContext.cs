@@ -34,7 +34,7 @@ namespace APIParks.Models
                     {
                         NationalId = 3,
                         NationalParkName = "Haleakala National Park",
-                        NationalParkLocation = "Maui, Hawaii",
+                        NationalParkLocation = "Hawaii",
                         NationalParkDescription = "Haleakala National Park is named after Haleakala, a dormant volcano within its boundaries. The name is Hawaiian for 'house of the sun'. According to a local legend, the demigod Maui imprisoned the sun here in order to lengthen the day."
                     },
                     new National
@@ -58,7 +58,7 @@ namespace APIParks.Models
                     {
                         StateId = 1,
                         StateParkName = "Iao Valley State Park",
-                        StateParkLocation = "Maui, Hawaii",
+                        StateParkLocation = "Hawaii",
                         StateParkDescription = "Iao Valley State Park features a dense rainforest canopy. It is dominated by the Iao Needle, a 1,200ft vegetation-covered lava remnant that rises from the valley floor to a higher height than the Eiffel Tower. "
                     },
                     new State
@@ -79,8 +79,8 @@ namespace APIParks.Models
                     {
                         StateId = 4,
                         StateParkName = "Na Pali Coast State Park",
-                        StateParkLocation = "Kaua'i, Hawaii",
-                        StateParkDescription = "Na Pali Coast State Park is located on the oldest inhabited Hawaiian Island, Kaua'i.It is known for its towering pali, or sea cliffs, narrow valleys, streams and cascading waterfalls. The state park was formed to protect the Kalalau Valley. "
+                        StateParkLocation = "Hawaii",
+                        StateParkDescription = "Na Pali Coast State Park is located on the oldest inhabited Hawaiian Island, Kaua'i. It is known for its towering pali, or sea cliffs, narrow valleys, streams and cascading waterfalls. The state park was formed to protect the Kalalau Valley. "
                     },
                     new State
                     {
