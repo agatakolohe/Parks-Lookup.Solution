@@ -148,7 +148,7 @@ Explore the API endpoints in Postman or a browser.
 
 ##### Using Swagger Documentation
 
-To explore the API with Swashbuckle, launch using the command `dotnet run` in the terminal and go to `http://localhost:5000/swagger`
+To explore the API with Swashbuckle, launch using the command `dotnet run` in the terminal and go to `http://localhost:5000/` in browser.
 
 ## Endpoints
 
