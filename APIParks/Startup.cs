@@ -1,6 +1,7 @@
 ﻿using APIParks.Models;
 using APIParks.Helpers;
 using APIParks.Services;
+using Automapper;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,7 +44,7 @@ namespace APIParks
                     }
                 });
             });
-
+            services.AddAutoMapper();
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -93,6 +94,13 @@ namespace APIParks
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
             });
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseAuthentication();
             // app.UseHttpsRedirection();
             app.UseMvc();
         }
