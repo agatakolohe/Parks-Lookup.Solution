@@ -31,6 +31,12 @@ namespace APIParks.Controllers
             }
             return query.ToList();
         }
+        // GET api/states/{id}
+        [HttpGet("{id}")]
+        public ActionResult<State> GetById(int id)
+        {
+            return _db.States.FirstOrDefault(entry => entry.StateId == id);
+        }
         // GET api/states/{stateparklocation}
         [HttpGet("{stateparklocation}")]
         public ActionResult<IEnumerable<State>> GetParkByLocation(string stateParkLocation)

@@ -31,16 +31,20 @@ namespace APIParks.Controllers
             }
             return query.ToList();
         }
-
-        // GET api/nationals/{nationalparklocation}
-        [HttpGet("{nationalparklocation}")]
+        // GET api/nationals/{id}
+        [HttpGet("{id}")]
+        public ActionResult<National> GetById(int id)
+        {
+            return _db.Nationals.FirstOrDefault(entry => entry.NationalId == id);
+        }
+        // GET api/nationals/state?nationalparklocation={state}
+        [HttpGet("state")]
         public ActionResult<IEnumerable<National>> GetParkByLocation(string nationalParkLocation)
         {
             var query = _db.Nationals.AsQueryable();
             query = query.Where(entry => entry.NationalParkLocation == nationalParkLocation);
             return query.ToList();
         }
-
         //POST api/nationals
         [HttpPost]
         public void Post([FromBody] National national)
