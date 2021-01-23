@@ -307,20 +307,14 @@ If any errors or bugs occur with installation, delete both bin and obj folders a
 
 - .NET Core 2.2.0
 - ASP.NET Core MVC
-  <!-- - ASP.NET Core Razor Pages -->
-  <!-- - Bootstrap -->
 - C# 7.3
-<!-- - CSS -->
 - Entity Framework Core 2.2.6
 - GitHub
-<!-- - HTML -->
 - MySQL
 - MySQL Workbench
 - Postman
 - Swagger/Open API
 - Swashbuckle 5.5.0
-<!-- - [Unsplash](https://unsplash.com/) TODO remove if no UI -->
-- API Versioning 4.0.0
 - VS Code
 
 ### License
