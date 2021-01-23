@@ -37,8 +37,8 @@ namespace APIParks.Controllers
         {
             return _db.States.FirstOrDefault(entry => entry.StateId == id);
         }
-        // GET api/states/{stateparklocation}
-        [HttpGet("{stateparklocation}")]
+        // GET api/states/state?stateparklocation={state}
+        [HttpGet("state")]
         public ActionResult<IEnumerable<State>> GetParkByLocation(string stateParkLocation)
         {
             var query = _db.States.AsQueryable();

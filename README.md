@@ -168,7 +168,7 @@ DELETE /api/{value}/{id}
 
 ```
 GET /api/states
-GET api/states/{stateparklocation}
+GET api/states/state?stateparklocation={state}
 POST /api/states
 GET /api/states/{id}
 PUT /api/states/{id}
@@ -182,13 +182,13 @@ DELETE /api/states/{id}
 | stateparkname     | string | none    | false    | Return matches by state park name. | stateparkname=niagara falls state park |
 | stateparklocation | string | none    | false    | Return matches by state name       | stateparklocation=new york             |
 
-- For state park names please include 'state park' at the end of the name. Example: na pali coast state park
-- For state park locations please enter a state name. Example: hawaii
+- For state park name please include 'state park' at the end of the name. Example: na pali coast state park
+- For state park location please enter a state name. Example: hawaii
 
 #### Example Query
 
 1. `http://localhost:5000/api/states?stateparkname=niagara falls state park&stateparklocation=new york`
-2. `http://localhost:5000/api/states/hawaii`
+2. `http://localhost:5000/api/states/state?stateparklocation=hawaii`
 
 #### Sample JSON Response
 
@@ -232,7 +232,7 @@ DELETE /api/states/{id}
 
 ```
 GET /api/nationals
-GET api/nationals/{nationalparklocation}
+GET api/states/state?stateparklocation={state}
 POST /api/nationals
 GET /api/nationals/{id}
 PUT /api/nationals/{id}
@@ -246,13 +246,13 @@ DELETE /api/nationals/{id}
 | nationalparkname     | string | none    | false    | Return matches by national park name. | nationalparkname=yellowstone national park |
 | nationalparklocation | string | none    | false    | Return matches by state name          | nationalparklocation=wyoming               |
 
-- For national park names please include 'national park' at the end of the name. Example: grand teton national park
-- For state park locations please enter a state name. Example: wyoming
+- For national park name please include 'national park' at the end of the name. Example: grand teton national park
+- For state park location please enter a state name. Example: wyoming
 
 #### Example Query
 
 1. `http://localhost:5000/api/nationals?nationalparkname=yellowstone national park&nationalparklocation=wyoming`
-2. `http://localhost:5000/api/nationals/hawaii`
+2. `http://localhost:5000/api/states/state?stateparklocation=hawaii`
 
 #### Sample JSON Response
 
@@ -286,7 +286,7 @@ DELETE /api/nationals/{id}
 
 ## Known Bugs
 
-This is not a legit API, just for a learning experience :)
+This is not a real API, but a real learning experience.
 
 ## Support and Contact Details
 
