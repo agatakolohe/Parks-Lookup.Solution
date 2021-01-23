@@ -31,6 +31,7 @@ namespace APIParks.Controllers
             }
             return query.ToList();
         }
+
         // GET api/nationals/{nationalparklocation}
         [HttpGet("{nationalparklocation}")]
         public ActionResult<IEnumerable<National>> GetParkByLocation(string nationalParkLocation)

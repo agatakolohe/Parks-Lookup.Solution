@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace APIParks.Models
 {
@@ -12,7 +11,6 @@ namespace APIParks.Models
 
         public DbSet<State> States { get; set; }
         public DbSet<National> Nationals { get; set; }
-        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -286,18 +286,7 @@ DELETE /api/nationals/{id}
 
 ## Known Bugs
 
-This is not a real API.
-Attempted to implement JWT Authentication but it is currently not working. Migrations are dropping user table.
-
-```
-Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
-   at APIParks.Startup.ConfigureServices(IServiceCollection services) in /Users/agatakolodziej/Desktop/csharp/Parks-Lookup.Solution/APIParks/Startup.cs:line 58
-    at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.ConfigureServices(IServiceCollection services)
-   at Microsoft.AspNetCore.Hosting.Internal.WebHost.EnsureApplicationServices()
-   at Microsoft.AspNetCore.Hosting.Internal.WebHost.Initialize()
-   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
-   at APIParks.Program.Main(String[] args) in /Users/agatakolodziej/Desktop/csharp/Parks-Lookup.Solution/APIParks/Program.cs:line 17
-```
+This is not a legit API, just for a learning experience :)
 
 ## Support and Contact Details
 
