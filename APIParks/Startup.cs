@@ -47,6 +47,8 @@ namespace APIParks
             });
             services.AddCors();
             services.AddAutoMapper();
+            // configure DI for application services
+            services.AddScoped<IUserService, UserService>();
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -72,10 +74,7 @@ namespace APIParks
                 };
             });
 
-            // configure DI for application services
-            // services.AddScoped<IUserService, UserService>();
         }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -97,10 +96,10 @@ namespace APIParks
                 c.RoutePrefix = string.Empty;
             });
             // global cors policy
-            // app.UseCors(x => x
-            //     .AllowAnyOrigin()
-            //     .AllowAnyMethod()
-            //     .AllowAnyHeader());
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseAuthentication();
             // app.UseHttpsRedirection();
